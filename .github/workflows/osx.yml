@@ -58,3 +58,11 @@ jobs:
         run: |
           cd build
           make install
+
+      - name: artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: Binaries_${{ runner.os }}
+          path: |
+            build/*
+
